@@ -5,7 +5,7 @@
 my $num_jobs = shift;
 die "ERROR: Must provide number of jobs to submit!\n" if !defined($num_jobs);
 
-my $base_dir = "/demo-vol/gridengine/runtest";
+my $base_dir = "/demo-vol/gridengine/ge-runtest";
 
 my $cmd;
 for(my $ct = 0; $ct < $num_jobs; $ct++) {
