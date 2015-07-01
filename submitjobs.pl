@@ -5,7 +5,8 @@
 my $num_jobs = shift;
 die "ERROR: Must provide number of jobs to submit!\n" if !defined($num_jobs);
 
-my $base_dir = "/demo-vol/gridengine/ge-runtest";
+# TODO: You may need to change this directory (and possible create the logs directory)
+my $base_dir = "/energystorage/gridengine/ge-runtest";
 
 my $cmd;
 for(my $ct = 0; $ct < $num_jobs; $ct++) {
