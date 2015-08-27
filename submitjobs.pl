@@ -1,12 +1,16 @@
 #!/usr/bin/perl -w
 # Submits jobs to the queue
 
+use strict;
+use Cwd;
+
 # get number of jobs from prompt
 my $num_jobs = shift;
 die "ERROR: Must provide number of jobs to submit!\n" if !defined($num_jobs);
 
-# TODO: You may need to change this directory (and possible create the logs directory)
-my $base_dir = "/energystorage/gridengine/ge-runtest";
+# set the base directory to the current working dir.
+# NOTE: You may need to create the logs directory!
+my $base_dir = cwd();
 
 my $cmd;
 for(my $ct = 0; $ct < $num_jobs; $ct++) {
